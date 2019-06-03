@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CrudService } from "src/app/crud.service";
-
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+import { Book } from "../../book";
 
 @Component({
   selector: "app-edit-books",
@@ -10,8 +10,8 @@ import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 })
 export class EditBooksComponent implements OnInit {
   bookId: String;
-  book: any;
-  sub: any;
+  book: Book;
+  // sub: any;
   constructor(
     private route: ActivatedRoute,
     private crudService: CrudService,

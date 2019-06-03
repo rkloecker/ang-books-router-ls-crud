@@ -3,6 +3,7 @@ import { CrudService } from "src/app/crud.service";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
+import { Book } from "../../book";
 
 @Component({
   selector: "app-book-details",
@@ -11,10 +12,8 @@ import { switchMap } from "rxjs/operators";
 })
 export class BookDetailsComponent implements OnInit {
   bookId: String;
-  book: any;
-  sub: any;
-  // @Input() book;
-  // @Output() deleteBook: EventEmitter<any> = new EventEmitter();
+  book: Book;
+  // sub: any;
 
   constructor(
     private router: Router,
