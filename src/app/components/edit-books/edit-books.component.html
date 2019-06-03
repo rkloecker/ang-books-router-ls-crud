@@ -1,0 +1,22 @@
+<h1>Edit Book</h1>
+<form class="form" (ngSubmit)="onSubmit()">
+  <div class="input-field">
+    <input
+      class="input-field"
+      type="text"
+      name="title"
+      [(ngModel)]="book.title"
+    />
+    <label class="active" for="title">Title</label>
+  </div>
+  <div class="input-field">
+    <input
+      class="input-field"
+      type="text"
+      name="author"
+      [(ngModel)]="book.author"
+    />
+    <label class="active" for="author">Author</label>
+  </div>
+  <input type="submit" value="Update" class="btn" />
+</form>

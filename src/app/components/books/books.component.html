@@ -1,0 +1,9 @@
+<ul *ngFor="let book of books">
+  <li class="collection-item listelement">
+    <a
+      class="indigo-text text-darken-2 font_links"
+      [routerLink]="['books', book.id]"
+      >{{ book.title }}</a
+    >
+  </li>
+</ul>
