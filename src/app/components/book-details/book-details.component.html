@@ -5,8 +5,8 @@
     {{ book.author }}
   </h5>
   <h3>{{ book.title }}</h3>
-  <a class="btn mr-2" [routerLink]="['/books/edit', book.id]">Edit</a>
-  <a class="btn grey mr-2" [routerLink]="['/']">Back</a>
+  <a class="btn mr-1" [routerLink]="['/books/edit', book.id]">Edit</a>
+  <a class="btn grey mr-1" [routerLink]="['/']">Back</a>
 
   <button (click)="deleteBook()" class="btn red">
     Delete
