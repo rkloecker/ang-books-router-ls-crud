@@ -30,7 +30,12 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.bookId = this.route.snapshot.paramMap.get("id");
-    this.book = this.crudService.getItem(this.bookId);
+    const selectedBook = this.crudService.getItem(this.bookId);
+    if (selectedBook) {
+      this.book = selectedBook;
+    } else {
+      this.router.navigate([""]);
+    }
   }
 
   deleteBook() {

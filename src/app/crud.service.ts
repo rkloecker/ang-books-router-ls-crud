@@ -19,7 +19,14 @@ export class CrudService {
   }
 
   getItem(id: String): Book {
+    // if id is not known or fake or whatever: return default 'book'
+    // const defaultbook = {
+    //   title: "title unknown",
+    //   author: "author unknown",
+    //   id: "unknown id"
+    // } as Book;
     return this.getAll().filter(el => el.id === id)[0];
+    //  || defaultbook;
   }
 
   remove(id: String) {
